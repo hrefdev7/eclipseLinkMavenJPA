@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence>
+ <persistence-unit name="testPersistenceUnit" transaction-type="RESOURCE_LOCAL">
+  <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+  <exclude-unlisted-classes>false</exclude-unlisted-classes>
+  <properties>
+   <property name="javax.persistence.schema-generation.database.action" value="create"/>
+   <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:test;DB_CLOSE_DELAY=-1"/>
+   
+      <property name="eclipselink.ddl-generation" value="create-tables"/>
+      <property name="eclipselink.ddl-generation.output-mode" value="database" />
+  </properties>
+ </persistence-unit>
+</persistence>
